@@ -1,0 +1,15 @@
+O que acontece ao iniciar um repositório? Por que você precisa fazer isso?
+
+Ao iniciar um novo repositório é criado um arquivo .git. Para poder controlar as versões dos meus arquivos.
+
+-----------------------
+Em que se difere a área de preparação do diretório de trabalho e do repositório? Qual valor você acha que ela oferece?
+
+A área de preparação do repositório contém arquivos que provavelmente já foram finalizados e estão prontos
+para o commit. Já o diretório de trabalho contém arquivos onde ainda está havendo modificações e que portanto,
+não estão prontos para serem commitados. Acho que é interessante separar os arquivos por áreas, pois evita
+de commitar algo sem querer ou sem ter muita certeza. Há também o benefício de poder voltar os arquivos
+que estão na área de preparação para a área de "não rastreados" caso o programador perceba alguma mudança
+necessária a se fazer no arquivo.
+
+-----------------------
