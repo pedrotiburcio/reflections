@@ -13,3 +13,46 @@ que estão na área de preparação para a área de "não rastreados" caso o pro
 necessária a se fazer no arquivo.
 
 -----------------------
+Como você pode usar a área de preparação para garantir que tenha um commit por alteração lógica?
+
+Colocando os arquivos que pertecem apenas àquela alteração lógica na área de preparação e em seguida
+fazendo um commit.
+
+-----------------------
+Quais são algumas das situações em que branches seriam úteis para manter seu histórico organizado? Como branches ajudariam?
+
+Quando se deseja testar uma nova versão do código mas ainda não se tem certeza se vai dar certo ou não. Os branches ajudam
+pois se a versão de teste não der certo, o branch principal (master) não é afetado, e se a nova versão der certo, é só
+fazer o merge dos dois branches e o branch master assim é alterado recebendo as alterações provenientes do outro branch.
+
+-----------------------
+Como os diagramas ajudam a visualizar a estrutura de branches?
+
+Os diagramas são uma representação do fluxo de todos os branches, e através do desenho fica claro qual a sua estrutura, já
+que não há condições de manter tudo isso em mente.
+
+-----------------------
+Qual é o resultado da mesclagem de dois branches? Por que o representamos no diagrama dessa forma?
+
+O resultado é um único branch que corresponde a fusão dos branches combinados. Pois ele engloba as funcionalidades
+presentes nos dois branches, removendo e adicionando o que for conveniente, de acordo com regras do tipo:
+1 - Se o conteúdo estava desde o início da ramificação e foi excluído por um dos branches, ele não deve permanecer no branch resultante da fusão.
+2 - Se o conteúdo não estava desde o início da ramificação e foi adicionado por um dos branches, ele deve ser incluído no branch resultante da fusão.
+3 - Se o conteúdo estava desde o início da ramificação e não foi modificado por um dos dois branches, ele deve permanecer
+no branch resultante da fusão.
+
+-----------------------
+Quais são os prós e contras da mesclagem automática do Git v. sempre fazer mesclagens manualmente?
+
+Prós Mesclagem Automática:
+Poupar tempo do programador em realizar a mesclagem.
+
+Contras Mesclagem Automática:
+Mesclar de uma maneira que o programador não deseja.
+
+Prós Mesclagem Manual:
+Mesclar da maneira que o programador deseja, pois ele quem define o que será mantido/alterado
+na mesclagem antes de realizá-la.
+
+Contras Mesclagem Manual:
+Esquecer de algo que deve ser alterado e o resultado da mesclagem não ser da forma desejada.
