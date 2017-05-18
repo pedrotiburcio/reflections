@@ -7,10 +7,10 @@ Em que se difere a área de preparação do diretório de trabalho e do reposit�
 
 A área de preparação do repositório contém arquivos que provavelmente já foram finalizados e estão prontos
 para o commit. Já o diretório de trabalho contém arquivos onde ainda está havendo modificações e que portanto,
-não estão prontos para serem commitados. Acho que é interessante separar os arquivos por áreas, pois evita
-de commitar algo sem querer ou sem ter muita certeza. Há também o benefício de poder voltar os arquivos
+não estão prontos para serem commitados. Acho que é interessante separar os arquivos por áreas, pois assim se evita
+de fazer o commit de algo sem querer ou sem ter muita certeza. Há também o benefício de poder voltar os arquivos
 que estão na área de preparação para a área de "não rastreados" caso o programador perceba alguma mudança
-necessária a se fazer no arquivo.
+necessária a se fazer no arquivo antes de fazer o commit.
 
 -----------------------
 Como você pode usar a área de preparação para garantir que tenha um commit por alteração lógica?
@@ -23,7 +23,7 @@ Quais são algumas das situações em que branches seriam úteis para manter seu
 
 Quando se deseja testar uma nova versão do código mas ainda não se tem certeza se vai dar certo ou não. Os branches ajudam
 pois se a versão de teste não der certo, o branch principal (master) não é afetado, e se a nova versão der certo, é só
-fazer o merge dos dois branches e o branch master assim é alterado recebendo as alterações provenientes do outro branch.
+fazer o merge dos dois branches. O branch master será alterado recebendo as alterações provenientes do outro branch.
 
 -----------------------
 Como os diagramas ajudam a visualizar a estrutura de branches?
@@ -34,12 +34,13 @@ que não há condições de manter tudo isso em mente.
 -----------------------
 Qual é o resultado da mesclagem de dois branches? Por que o representamos no diagrama dessa forma?
 
-O resultado é um único branch que corresponde a fusão dos branches combinados. Pois ele engloba as funcionalidades
-presentes nos dois branches, removendo e adicionando o que for conveniente, de acordo com regras do tipo:
+O resultado é um único branch que corresponde a fusão dos branches combinados. O branch resultante engloba as funcionalidades presentes nos dois branches que foram mesclados, removendo e adicionando o que for conveniente, de acordo com regras do tipo:
 1 - Se o conteúdo estava desde o início da ramificação e foi excluído por um dos branches, ele não deve permanecer no branch resultante da fusão.
 2 - Se o conteúdo não estava desde o início da ramificação e foi adicionado por um dos branches, ele deve ser incluído no branch resultante da fusão.
 3 - Se o conteúdo estava desde o início da ramificação e não foi modificado por um dos dois branches, ele deve permanecer
 no branch resultante da fusão.
+4 - Se o mesmo conteúdo foi modificado por mais de um contribuidor, o git avisa que é necessário decidir qual modificação
+prevalecerá. Para isso as duas ou mais partes devem conversar e entrar em acordo.
 
 -----------------------
 Quais são os prós e contras da mesclagem automática do Git v. sempre fazer mesclagens manualmente?
