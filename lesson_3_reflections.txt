@@ -1,1 +1,6 @@
+Quando gostaria de usar um repositório remoto em vez de manter o trabalho local?
 
+Em algumas situações como: 
+1. Quando for necessária a colaboração de outras pessoas no projeto.
+2. Quando o projeto estiver pronto para ser compartilhado com outras pessoas.
+3. Quando o projeto estiver "ficando grande" e for necessário ter uma cópia remota. 
