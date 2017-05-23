@@ -1,6 +1,64 @@
 Quando gostaria de usar um repositório remoto em vez de manter o trabalho local?
 
-Em algumas situações como: 
+Em algumas situações como:
 1. Quando for necessária a colaboração de outras pessoas no projeto.
 2. Quando o projeto estiver pronto para ser compartilhado com outras pessoas.
-3. Quando o projeto estiver "ficando grande" e for necessário ter uma cópia remota. 
+3. Quando o projeto estiver "ficando grande" e for necessário ter uma cópia remota.
+
+-----------------------
+Por que você prefere efetuar pull de alterações manualmente do que deixar o Git atualizar-se automaticamente
+com o seu repositório remoto?
+
+Por que evita que uma alteração seja atualizada no Git antes de estar pronta.
+
+-----------------------
+Descreva as diferenças entre bifurcações, clones e branches. Quando você usaria um e não os outros?
+
+Bifurcações: bifurcação é copiar um repositório do github de outra pessoa para o seu github. A bifurcação é
+apropriada quando se deseja desenvolver um projeto partindo de um outro projeto. Ou seja, não começando do zero.
+
+Clones: clone é copiar o seu repositório que está no github para o seu desktop (área local), ou copiar
+o seu repositório local para outro diretório no seu computador. É útil quando você está trabalhando em
+um projeto e deseja tê-lo em sua máquina local também, para poder editá-lo principalmente se nessa edição
+houver necessidade de escrita de código em alguma linguagem. Uma outra utilidade do clone é quando você já
+tem o seu projeto em sua máquina local, mas mesmo assim deseja ter uma cópia em outro local do seu computador.
+
+Branches: é criar um novo caminho no seu projeto. É útil quando se quer testar uma nova funcionalidade/versão
+que você não sabe se dará certo futuramente, sem que pra isso comprometa o projeto original. Se a nova funcionalidade
+ficou como você esperava, o branch poderá ser unido ao seu projeto original através de um merge. Caso o resultado
+tenha sido aquém do esperado ou você mudou de ideia e não quer mais levar esta ideia adiante, é só deletar o branch
+e nada do projeto original será alterado/comprometido.
+
+-----------------------
+Qual é o benefício de ter uma cópia do último estado conhecido do remoto armazenado localmente?
+
+Poder fazer um merge de avanço rápido, pois já que sua versão está atualizada, não é necessário resolver conflitos
+quando você realizar o próximo commit.
+
+-----------------------
+Como você colaboraria sem usar Git ou GitHub? O que seria mais fácil e mais difícil?
+
+Seria bem mais difícil. Talvez a única coisa interessante é que sem o Git e o GitHub,
+os participantes do projeto seriam forçados a ter mais contato e interação, através
+de conversas, já que essas conversas que funcionariam como um controle de versão. Só seria
+permitida a atualização do projeto por uma pessoa por vez, para não causar conflitos
+(isso é bem complicado). Mas essa interação por meio de conversas também é algo totalmente
+possível com o uso de Git e GitHub, então acredito que tudo (testar uma nova funcionalidade,
+resolver conflitos, colaborar em outros projetos) é mais fácil com Git e GitHub.
+
+-----------------------
+Quando você gostaria de fazer alterações em um branch separado, e não diretamente no master? Quais são os
+benefícios de cada abordagem?
+
+Quando não quiser de alguma maneira correr riscos de comprometer o branch master. Sendo mais específico:
+quando for necessário testar uma nova funcionalidade que não tenho certeza se dará certo, ou quando estiver
+trabalhando com outras pessoas em projetos onde são necessárias as opiniões delas antes da modificação do
+projeto com uma nova funcionalidade.
+
+Trabalhar diretamente no master é mais rápido e mais fácil, quando se tem certeza do que está se fazendo,
+e quando se trabalha sozinho, pois basicamente o trabalho consistirar em efetuar push e pull.
+
+Trabalhar em um branch separado é benéfico quando não se tem certeza sobre o que está se tentando introduzir
+no projeto, pois aí o master não corre riscos caso a nova funcionalidade não seja aquilo que você esperava,
+ou você decidir abortá-la depois de pronta, por simplesmente ter mudado de ideia. Também é benéfico para trabalhos
+em grupo já que as funcionalidades vão sendo atualizadas de uma maneira que todos tem acesso e concordam com as atualizações.
